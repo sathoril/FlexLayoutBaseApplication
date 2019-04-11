@@ -1,0 +1,27 @@
+<div class="container mdc-typography">
+  <div [ngClass]="isMobile ? 'card-mobile' : 'card'">
+   
+    <div class="header">
+      <img class="logo-trello" src="../assets/img/trello-logo.png"/>
+      <div class="titulo" >
+          <h1>Dashboards</h1>
+          <p>powered by Trello ©</p>
+      </div>
+    </div>
+
+    <div class="formulario">
+      <form>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Usuário">
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </mat-form-field>
+
+        </form>
+    </div>
+
+  </div>
+</div>
