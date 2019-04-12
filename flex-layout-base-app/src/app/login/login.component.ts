@@ -27,4 +27,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  login() {
+    // TODO: Implement login method
+  }
 }
