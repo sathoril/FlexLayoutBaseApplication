@@ -5,19 +5,21 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-//Material
+// Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../shared/material/material.module';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { HomeComponent } from './home/home.component';
+import { SideNavComponent } from '../shared/components/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
