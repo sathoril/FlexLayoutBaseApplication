@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements OnInit {
   
   // It changes to true if the device is a Mobile device and sets false if the device is a Desktop

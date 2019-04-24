@@ -7,12 +7,13 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent implements OnInit {
 
-  //Allows for the password to be revealed or not
+  // Allows for the password to be revealed or not
   hide = true;
 
-  //It changes to true if the device is a Mobile device and sets false if the device is a Desktop
+  // It changes to true if the device is a Mobile device and sets false if the device is a Desktop
   isMobile: Boolean;
 
   constructor(private breakpointObserver: BreakpointObserver, private router: Router) { 
@@ -29,7 +30,6 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    console.log("clicado")
     this.router.navigate(['/home']);
   }
 }
