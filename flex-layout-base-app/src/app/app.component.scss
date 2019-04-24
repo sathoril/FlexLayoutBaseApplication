@@ -1,0 +1,51 @@
+.container {        //Div que contem todo conteudo da página, que no caso é apenas a div Card
+    height: 100vh;  //Atribui a altura igual ao tamanho da tela do browser
+    display: flex;  //Atribui posicionamento do tipo Flex
+}
+
+    .card {
+        margin: auto;
+        width: 25%;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .logo-trello {
+                margin: auto;
+                padding: 50px 0px 0px 0px;
+                width:150px;
+            }
+
+            .titulo {
+                text-align: center;
+            }
+
+            .titulo > h1 {
+                margin-bottom: 0px;
+            }
+
+            .titulo > p {
+                margin-top: 0px;
+                font-size:12px; 
+            }
+
+            .formulario {
+                min-width: 150px;
+                width: 70%;
+                margin: auto;
+                padding: 40px;
+            }
+
+            .full-width {
+                width: 100%;
+            }
+
+                mat-icon {
+                    cursor: pointer;
+                }
