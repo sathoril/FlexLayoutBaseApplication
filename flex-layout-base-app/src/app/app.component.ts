@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Globals } from 'src/shared/globals';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [ Globals ]
 })
 export class AppComponent implements OnInit{
 
@@ -13,8 +15,7 @@ export class AppComponent implements OnInit{
   constructor(private router: Router) { }
   
   ngOnInit() {
-    //this.router.navigate(['/login']);
-    this.router.navigate(['/home']);
+    this.router.navigate(['/login']);
   }
 
 }

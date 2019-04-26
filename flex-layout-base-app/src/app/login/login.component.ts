@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
+import { Globals } from 'src/shared/globals';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   // It changes to true if the device is a Mobile device and sets false if the device is a Desktop
   isMobile: Boolean;
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) { 
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private globals:Globals) { 
 
     this.breakpointObserver
     .observe([ Breakpoints.Small, Breakpoints.HandsetPortrait ])
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log("Login" + this.globals.showNavigatioMenu)
   }
 
   loginUser() {
