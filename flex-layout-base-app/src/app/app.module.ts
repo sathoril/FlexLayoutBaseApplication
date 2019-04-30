@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SideNavComponent } from '../shared/components/side-nav/side-nav.component';
+import { NavigationService } from 'src/shared/services/navigation.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { SideNavComponent } from '../shared/components/side-nav/side-nav.compone
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [NavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

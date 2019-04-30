@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Globals } from 'src/shared/globals';
+import { NavigationService } from 'src/shared/services/navigation.service';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +8,11 @@ import { Globals } from 'src/shared/globals';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private globals: Globals) {
-   }
+  constructor(private navService: NavigationService) {
+    this.navService.show();
+  }
 
   ngOnInit() {
-    this.globals.showNavigatioMenu = false;
-    console.log("Home" + this.globals.showNavigatioMenu)
   }
 
 }

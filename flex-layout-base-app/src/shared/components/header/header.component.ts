@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
-import { Globals } from 'src/shared/globals';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +15,7 @@ export class HeaderComponent implements OnInit {
 
   //public hideNavigationMenu = false;
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private globals: Globals) {
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
     this.breakpointObserver
     .observe([ Breakpoints.Small, Breakpoints.HandsetPortrait ])
     .subscribe((state: BreakpointState) => {
@@ -26,7 +25,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("Navigation Menu " + this.globals.showNavigatioMenu)
   }
 
   logoutUser() {
