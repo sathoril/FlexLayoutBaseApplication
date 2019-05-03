@@ -1,0 +1,18 @@
+@import "~@angular/material/theming";
+/* ##### INICIO - Variáveis do tema customizado do material ##### */
+//
+// Define the palettes for your theme using the Material Design palettes.
+// For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$material-primary: mat-palette($mat-deep-purple, 500, 400, 900);
+$material-secondary: mat-palette($mat-pink, A200, A100, A400);
+$material-attention: mat-palette($mat-red);
+/* ##### FIM - Variáveis do tema customizado do material ##### */
+
+/* Cores conforme o tema customizado */
+$primary-color: mat-color($material-primary);
+$secundary-color: mat-color($material-secondary);
+$alert-color: mat-color($material-attention);
+
+$mobile-max-width: 768px;
+$sidenav-item-space-size: 1vw;

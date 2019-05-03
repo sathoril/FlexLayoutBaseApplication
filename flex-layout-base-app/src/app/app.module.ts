@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../shared/material/material.module';
 import { LoginComponent } from './login/login.component';
-import { HeaderComponent } from '../shared/components/header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SideNavComponent } from '../shared/components/side-nav/side-nav.component';
 import { NavigationService } from 'src/shared/services/navigation.service';
@@ -18,7 +17,6 @@ import { NavigationService } from 'src/shared/services/navigation.service';
   declarations: [
     AppComponent,
     LoginComponent,
-    HeaderComponent,
     HomeComponent,
     SideNavComponent
   ],

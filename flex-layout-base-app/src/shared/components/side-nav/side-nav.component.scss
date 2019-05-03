@@ -1,3 +1,78 @@
-p {
-    margin-top:50px;
+@import '../../../scss/custom-toolbar.scss';
+@import '../../../scss/custom-toolbar.scss';
+@import '../../../scss/variables';
+
+$padding-icone-menu: calc(#{sidenav-item-space-size} - 7px);
+
+// Fills the remaining space withing the itens in a toolbar-row
+.fill-remaining-space {
+    flex: 1 1 auto;
 }
+
+mat-icon {
+    color: white;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.toolbar {
+    // display: flex;
+    // justify-content: space-between;
+    // position: fixed;
+}
+
+    .toolbar-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .toggle-button {
+        display: inline-flex;
+        margin-right:1vh;
+    }
+        .logo {
+
+        }
+
+            .logo-trello {
+                width:180px;
+            }
+
+        .title {
+            padding-left: 1vh;
+        }
+
+        .exit {
+            cursor: pointer;
+            display: inline-flex;
+        }
+
+
+    .sidenav-container {
+      /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+         causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+      flex: 1;
+
+      mat-sidenav {
+        a {
+          &.active {
+            background-color: $primary-color;
+            color: white;
+          }
+
+          .sidenav-item-label {
+            width: 100%;
+            padding-left: $sidenav-item-space-size;
+          }
+        }
+      }
+    }
