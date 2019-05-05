@@ -9,15 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit { 
-  @ViewChild('sidenav') sidenav:any;
+  @ViewChild('sidenavMobile') sidenav:any;
 
   isMobile: Boolean;
 
   menuItems = [
-    { icone: 'home', nome: 'Home', link: '/' },
-    { icone: 'shopping_cart', nome: 'Lista de compras', link: '/compras' },
-    { icone: 'assignment', nome: 'Tarefas da semana', link: '/tarefas' },
-    { icone: 'hearing', nome: 'Ouvidoria', link: '/ouvidoria' }
+    { icone: 'home', nome: 'Home', link: '/' }
   ];
 
   constructor(private breakpointObserver: BreakpointObserver, private router:Router) {
