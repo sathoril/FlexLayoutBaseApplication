@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit { 
-  @ViewChild('sidenavMobile') sidenav:any;
+  @ViewChild('sidenav') sidenav:any;
 
   isMobile: Boolean;
 
@@ -23,6 +23,16 @@ export class SideNavComponent implements OnInit {
     .observe([ Breakpoints.Small, Breakpoints.HandsetPortrait ])
     .subscribe((state: BreakpointState) => {
       this.isMobile = state.matches;
+
+      // Sets the behaviour of the SideNav Component based on if its Mobile or not
+      if(this.isMobile) {
+        this.sidenav.opened = false;
+        this.sidenav.mode = 'over';
+      }
+      else {
+        this.sidenav.opened = true;
+        this.sidenav.mode = 'side';
+      }
     });
   }
 

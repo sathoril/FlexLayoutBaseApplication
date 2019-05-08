@@ -63,6 +63,9 @@ mat-icon {
       flex: 1;
 
       mat-sidenav {
+
+        width:25vh;
+
         a {
           &.active {
             background-color: $primary-color;
