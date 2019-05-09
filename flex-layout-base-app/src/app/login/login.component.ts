@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 import { NavigationService } from 'src/shared/services/navigation.service';
+import { ProgressSpinnerService } from 'src/shared/components/progress-spinner/progress-spinner.service';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,7 @@ import { NavigationService } from 'src/shared/services/navigation.service';
 })
 
 export class LoginComponent implements OnInit {
+  isLoading = false;
 
   // Allows for the password to be revealed or not
   hide = true;
@@ -24,7 +26,6 @@ export class LoginComponent implements OnInit {
     .subscribe((state: BreakpointState) => {
       this.isMobile = state.matches;
     });
-
     this.navigationService.hide();
   }
 
@@ -32,6 +33,10 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    this.router.navigate(['/home']);
+    //this.router.navigate(['/home']);
+  }
+
+  exibirSpinner() {
+    this.isLoading = true;
   }
 }
