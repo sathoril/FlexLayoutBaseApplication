@@ -33,6 +33,7 @@ mat-icon {
     .toolbar-row {
         display: flex;
         justify-content: space-between;
+        min-height: 104px;
     }
     
     .toggle-button {
@@ -63,6 +64,9 @@ mat-icon {
       flex: 1;
 
       mat-sidenav {
+
+        width:25vh;
+
         a {
           &.active {
             background-color: $primary-color;
