@@ -33,10 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    //this.router.navigate(['/home']);
+    this.router.navigate(['/home']);
   }
-
-  exibirSpinner() {
-    this.isLoading = true;
-  }
+  
 }
