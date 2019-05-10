@@ -10,14 +10,19 @@ import { NavigationService } from 'src/shared/services/navigation.service';
 export class AppComponent implements OnInit{
 
   title = 'Aplicação Base';
+  teste: boolean;
 
   constructor(private router: Router, private navService: NavigationService) { 
     this.navService.show();
+    this.teste = false;
   }
   
   ngOnInit() {
     //this.router.navigate(['/home']);
     this.router.navigate(['/login']);
   }
-
+  
+  abrirSpinner() {
+    this.teste = true;
+  }
 }
