@@ -33,6 +33,7 @@ mat-icon {
     .toolbar-row {
         display: flex;
         justify-content: space-between;
+        min-height: 104px;
     }
     
     .toggle-button {
