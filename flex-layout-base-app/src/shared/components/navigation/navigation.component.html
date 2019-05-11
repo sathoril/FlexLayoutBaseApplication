@@ -28,6 +28,24 @@
   <!-- Sidenav -->
   <mat-sidenav-container class="sidenav-container">
       <mat-sidenav #sidenav [(mode)]="mode" [(opened)]="opened">
+
+        <!-- User Information (SideBar Header) -->
+        <mat-nav-list>
+
+          <div class="profile-info">
+
+              <div class="user-picture">
+                  <img [src]="profilePicture" [ngClass]="isMobile ? 'profile-picture-mobile' : 'profile-picture-desktop'" *ngIf="profilePicture">
+                  <mat-icon matSuffix [ngClass]="isMobile ? 'mat-icon-profile-mobile' : 'mat-icon-profile-desktop'" *ngIf="!profilePicture">person_pin</mat-icon>
+              </div>
+
+              <div class="user-info">
+                <h5>Bem vindo, {{nome}}!</h5>
+              </div>
+            </div>
+            
+        </mat-nav-list>
+
         <mat-nav-list>
           <a mat-list-item *ngFor="let item of menuItems" [routerLink]="item.link" [routerLinkActiveOptions]="{ exact: true }"
             routerLinkActive="active">

@@ -12,6 +12,8 @@ export class NavigationComponent implements OnInit {
   @ViewChild('sidenav') sidenav:any;
 
   isMobile: Boolean;
+  profilePicture: String = '../assets/img/user-picture.jpeg';
+  nome: String = 'sathoril'
 
   menuItems = [
     { icone: 'home', nome: 'Home', link: '/' }
