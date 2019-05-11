@@ -12,6 +12,11 @@ $padding-icone-menu: calc(#{sidenav-item-space-size} - 7px);
 mat-icon {
     color: white;
     font-size: 30px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
 }
 
 .container {
@@ -39,6 +44,7 @@ mat-icon {
     .toggle-button {
         display: inline-flex;
         margin-right:1vh;
+       
     }
         .logo {
 
@@ -53,7 +59,6 @@ mat-icon {
         }
 
         .exit {
-            cursor: pointer;
             display: inline-flex;
         }
 
