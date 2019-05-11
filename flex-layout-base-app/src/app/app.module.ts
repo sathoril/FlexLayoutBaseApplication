@@ -11,7 +11,7 @@ import { MaterialModule } from '../shared/material/material.module';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from '../shared/components/navigation/navigation.component';
-import { NavigationService } from 'src/shared/services/navigation.service';
+import { NavigationService } from 'src/shared/components/navigation/navigation.service';
 import { ProgressSpinnerComponent } from '../shared/components/progress-spinner/progress-spinner.component';
 
 @NgModule({

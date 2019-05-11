@@ -15,6 +15,10 @@ export class NavigationComponent implements OnInit {
   profilePicture: String = '../assets/img/user-picture.jpeg';
   nome: String = 'sathoril'
 
+  mode: any;
+  opened:any;
+  conteudo: any;
+  
   menuItems = [
     { icone: 'home', nome: 'Home', link: '/' }
   ];
