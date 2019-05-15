@@ -6,3 +6,4 @@ The application contains:
 * Header 
 * Side Menu that can be hidden 
 * Footer
+* Loading (Progress Spinner Popup)
