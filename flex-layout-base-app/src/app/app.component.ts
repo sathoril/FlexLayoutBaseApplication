@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavigationService } from 'src/shared/services/navigation.service';
+import { NavigationService } from 'src/shared/components/navigation/navigation.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ export class AppComponent implements OnInit{
   title = 'Aplicação Base';
   teste: boolean;
 
-  constructor(private router: Router, private navService: NavigationService) { 
+  constructor(private router: Router, public navService: NavigationService) { 
     this.navService.show();
     this.teste = false;
   }

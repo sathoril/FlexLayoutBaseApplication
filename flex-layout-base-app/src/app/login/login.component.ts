@@ -1,7 +1,7 @@
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavigationService } from 'src/shared/services/navigation.service';
+import { NavigationService } from 'src/shared/components/navigation/navigation.service';
 
 @Component({
   selector: "app-login",
