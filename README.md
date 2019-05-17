@@ -4,6 +4,5 @@ Application with responsive layout developed using FlexLayout in order to be use
 The application contains:
 * Login screen 
 * Header 
-* Side Menu that can be hidden 
-* Footer
+* Responsive Side Menu
 * Loading (Progress Spinner Popup)
