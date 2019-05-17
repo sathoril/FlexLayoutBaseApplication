@@ -10,10 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../shared/material/material.module';
 
 // My Components/Modules
-import { FlexLayoutBaseModule } from '../app/flexlayoutbase/flexlayoutbase.module';
+import { FlexLayoutBaseModule } from './flex-layout-base/flex-layout-base.module';
 
-import { LoginComponent } from './login/login.component';
-import { NavigationService } from 'src/shared/components/navigation/navigation.service';
 import { PopupAlertService } from '../shared/components/popup-alert/popup-alert.service';
 import { LoginModule } from './login/login.module';
 

@@ -1,8 +1,6 @@
-import {MediaMatcher, BreakpointObserver, BreakpointState, Breakpoints} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component, OnDestroy, ViewChild, OnInit} from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import {BreakpointObserver, BreakpointState, Breakpoints} from '@angular/cdk/layout';
+import {Component, ViewChild, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
-import { NavigationService } from './navigation.service';
 
 @Component({
   selector: 'app-navigation',
