@@ -7,22 +7,17 @@ import { NavigationService } from 'src/shared/components/navigation/navigation.s
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements OnInit{
 
   title = 'Aplicação Base';
   teste: boolean;
 
-  constructor(private router: Router, public navService: NavigationService) { 
-    this.navService.show();
-    this.teste = false;
+  constructor(private router: Router) { 
   }
   
   ngOnInit() {
     //this.router.navigate(['/home']);
     this.router.navigate(['/login']);
-  }
-  
-  abrirSpinner() {
-    this.teste = true;
   }
 }

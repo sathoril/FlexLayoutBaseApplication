@@ -2,6 +2,7 @@ import {MediaMatcher, BreakpointObserver, BreakpointState, Breakpoints} from '@a
 import {ChangeDetectorRef, Component, OnDestroy, ViewChild, OnInit} from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
+import { NavigationService } from './navigation.service';
 
 @Component({
   selector: 'app-navigation',
@@ -24,25 +25,16 @@ export class NavigationComponent implements OnInit {
   ];
 
   constructor(private breakpointObserver: BreakpointObserver, private router:Router) {
-
     this.breakpointObserver
     .observe([ Breakpoints.Small, Breakpoints.HandsetPortrait ])
     .subscribe((state: BreakpointState) => {
-      this.isMobile = state.matches;
-
-      // Sets the behaviour of the SideNav Component based on if its Mobile or not
-      if(this.isMobile) {
-        this.sidenav.opened = false;
-        this.sidenav.mode = 'over';
-      }
-      else {
-        this.sidenav.opened = true;
-        this.sidenav.mode = 'side';
-      }
+      this.isMobile = state.matches;      
+      this.setSideNavResponsiveBehaviour();
     });
   }
 
   ngOnInit() {
+    this.setSideNavResponsiveBehaviour();
   }
 
   openSidenav() {
@@ -51,5 +43,17 @@ export class NavigationComponent implements OnInit {
 
   logoutUser() {
     this.router.navigate(['/login']);
+  }
+
+  private setSideNavResponsiveBehaviour() {
+    // Sets the behaviour of the SideNav Component based on if its Mobile or not
+    if(this.isMobile) {
+      this.opened = false;
+      this.mode = 'over';
+    }
+    else {
+      this.opened = true;
+      this.mode = 'side';
+    }
   }
 }

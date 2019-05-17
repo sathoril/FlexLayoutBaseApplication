@@ -1,4 +1,3 @@
-<!-- Menu Mobile - INICIO -->
 <div class="container">
 
   <mat-toolbar color="primary" class="toolbar">
@@ -27,7 +26,7 @@
 
   <!-- Sidenav -->
   <mat-sidenav-container class="sidenav-container">
-      <mat-sidenav #sidenav [(mode)]="mode" [(opened)]="opened">
+      <mat-sidenav #sidenav [(mode)]="mode" [(opened)]="opened"> 
 
         <!-- User Information (SideBar Header) -->
         <mat-nav-list>
@@ -56,7 +55,7 @@
       </mat-sidenav>
   
       <mat-sidenav-content>
-        <ng-container *ngTemplateOutlet="conteudo"></ng-container>
+        <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>
  
