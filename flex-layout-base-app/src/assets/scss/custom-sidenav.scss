@@ -1,0 +1,11 @@
+@import './mixins';
+@import './variables';
+
+.mat-sidenav {
+  top: 8.2vh !important;
+  width: 16vw;
+
+  @include mobile {
+    width: 58vw;
+  }
+}
