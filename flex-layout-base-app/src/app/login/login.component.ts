@@ -1,7 +1,7 @@
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavigationService } from 'src/shared/services/navigation.service';
+import { NavigationService } from 'src/shared/components/navigation/navigation.service';
 
 @Component({
   selector: "app-login",
@@ -17,22 +17,17 @@ export class LoginComponent implements OnInit {
   // It changes to true if the device is a Mobile device and sets false if the device is a Desktop
   isMobile: Boolean;
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router,private navigationService: NavigationService) {
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
     this.breakpointObserver
     .observe([ Breakpoints.Small, Breakpoints.HandsetPortrait ])
     .subscribe((state: BreakpointState) => {
       this.isMobile = state.matches;
     });
-    
-    this.navigationService.hide();
   }
 
   ngOnInit() {}
 
   loginUser() {
-    this.router.navigate(["/home"]);
+    this.router.navigate(["/flexlayoutbase"]);
   }
-
-  testMethod() {}
-  
 }
