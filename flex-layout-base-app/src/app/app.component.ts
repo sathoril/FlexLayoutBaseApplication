@@ -10,8 +10,7 @@ import { NavigationService } from 'src/shared/components/navigation/navigation.s
 
 export class AppComponent implements OnInit{
 
-  title = 'Aplicação Base';
-  teste: boolean;
+  title = 'Base Application';
 
   constructor(private router: Router) { 
   }

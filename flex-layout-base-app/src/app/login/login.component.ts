@@ -30,7 +30,4 @@ export class LoginComponent implements OnInit {
   loginUser() {
     this.router.navigate(["/flexlayoutbase"]);
   }
-
-  testMethod() {}
-  
 }
