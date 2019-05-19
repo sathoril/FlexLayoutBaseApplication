@@ -6,3 +6,4 @@ The application contains:
 * Header 
 * Responsive Side Menu
 * Loading (Progress Spinner Popup)
+* Alert Dialog (For future release)
